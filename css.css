@@ -1,0 +1,77 @@
+:root {
+    --Color1: #c24438;
+    --Color2: #2E2E2E;
+    --Color3: #f42b17;
+    --Color4: #F7F7F7;
+    --Color5: #38A1C2;
+    --Color6: #F2A044;
+    --Color7: #FFFFFF;
+    --fuente: "roboto", sans-serif;
+  }
+  
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    background-color: grey;
+    padding-top: 10rem;
+}
+
+form{
+    background-color: white;
+    width: 50rem;
+    height: 20rem;
+    padding-top: 3rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+.juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.juego label {
+    font-size: 3rem;
+}
+.juego .numero {
+    width: 30rem;
+    height: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.juego .btnEnviar {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 9%;
+}
+
+.mensaje {
+    background-color: white;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    margin: 0 auto;
+}
+
+.mensaje .resultado {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.mensaje .pista, .mensaje .previa {
+    font-size: 2rem;
+    text-align: center;
+}
