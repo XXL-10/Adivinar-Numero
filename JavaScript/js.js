@@ -8,6 +8,7 @@ const num = document.querySelector(".numero");
 let cont = 1;
 let resetButton;
 
+
 function juega() {
   let numUsuario = Number(num.value);
   if (cont === 1) {
@@ -26,15 +27,29 @@ function juega() {
   } else {
     resultado.textContent = "¡Incorrecto!";
     resultado.style.backgroundColor = "red";
+  
+    // Mostrar ayuda dependiendo de si el número es mayor o menor
     if (numUsuario < numrandom) {
-      ayuda.textContent = "¡El numero es mas grande!";
+      ayuda.textContent = "¡El numero es más grande!";
     } else if (numUsuario > numrandom) {
-      ayuda.textContent = "¡El numero es mas pequeño!";
+      ayuda.textContent = "¡El numero es más pequeño!";
     }
-  }
+  
+    // Ocultar los mensajes después de 5 segundos
+    setTimeout(() => {
+      resultado.style.display = "none";
+      ayuda.style.display = "none";
+    }, 5000);
+  
+    // Volver a mostrar los elementos cuando se realiza una nueva entrada incorrecta
+    resultado.style.display = "block";
+    ayuda.style.display = "block";
+  3}
+  
   cont++;
   num.value = "";
   num.focus();
+  
 }
 btn.addEventListener("click", juega);
 
